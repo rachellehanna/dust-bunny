@@ -1,0 +1,59 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 125%; /*1 rem=20px*/
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #f7f5f2;
+}
+
+main {
+    overflow: auto; /* prevent margins from escaping parent element */
+}
+
+.wrapper {
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    min-height: 100vh;
+}
+
+#play {
+    display: block;
+}
+
+.headerContainer {
+    width: 100%;
+    text-align: center;
+}
+
+.headerContainer img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.imageContainer {
+    display: flex;
+}
+
+.imageContainer img {
+    width: calc(100% / 3);
+}
+
+.addOnsContainer {
+    max-width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.addOnsContainer img {
+    width: calc(100% / 4 - 15px);
+    border: black 2px solid;
+    border-radius: 5%;
+}
