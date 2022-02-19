@@ -19,41 +19,122 @@ main {
 }
 
 header {
-    min-height: 100vh;
+    height: 100vh;
 }
 
-#play {
-    display: block;
-}
-
-.headerContainer {
-    width: 100%;
+#pageOne {
     text-align: center;
-}
-
-.headerContainer img {
-    max-width: 100%;
-    vertical-align: middle;
-}
-
-.imageContainer {
+    overflow: hidden;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.imageContainer img {
+/*.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+}*/
+
+#playButton:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.fadeOut {
+    opacity: 0;
+    transition: opacity 0.9s linear;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 0.9s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#pageTwo img {
     width: calc(100% / 3);
 }
 
-.addOnsContainer {
-    max-width: 100%;
-    flex-wrap: wrap;
+.makeArea {
     display: flex;
-    justify-content: space-between;
+    min-width: 100%;
+}
+
+.addOnsArea {
+    width: 50%;
+    background: lightblue;
+}
+
+.rowOne {
+    background-color: #f7f5f2;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.rowOne img {
+    width: calc(100% / 5);
+    border: solid 2px white;
+}
+
+.rowTwo {
+    background-color: orange;
+    display: flex;
+}
+
+.rowTwo img {
+    width: calc(100% / 5);
+}
+
+.rowThree {
+    background-color: pink;
+    display: flex;
     flex-wrap: wrap;
 }
 
-.addOnsContainer img {
-    width: calc(100% / 4 - 15px);
-    border: black 2px solid;
-    border-radius: 5%;
+.rowThree img {
+    width: calc(100% / 5);
+}
+
+.rowFour {
+    background-color: peachpuff;
+    display: flex;
+    flex-wrap: wrap;
+}
+.rowFour img {
+    width: calc(100% / 5);
+}
+
+.livePreviewArea {
+    width: 50%;
+    background: white;
+}
+
+.livePreviewImageContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.livePreviewImageContainer img {
+    max-width: 100%;
+}
+
+footer {
+    text-align: center;
+    background-color: white;
 }
