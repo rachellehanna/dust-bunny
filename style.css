@@ -10,16 +10,15 @@ body {
 
 main {
     overflow: auto; /* prevent margins from escaping parent element */
-}
-
-.wrapper {
     max-width: 1300px;
     width: 90%;
     margin: 0 auto;
 }
 
-header {
+main section {
     height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .imageContainer {
@@ -39,12 +38,6 @@ header {
     align-items: center;
 }
 
-/*.visible {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 2s linear;
-}*/
-
 #playButton:hover {
     transform: scale(1.1);
     cursor: pointer;
@@ -52,6 +45,10 @@ header {
 
 .hidden {
     display: none !important;
+}
+
+.show {
+    display: block;
 }
 
 .fadeOut {
@@ -74,86 +71,31 @@ header {
     }
 }
 
-.pageTwoContainer,
-.pageThreeContainer {
-    max-width: 100%;
-    display: flex;
+/*title of page*/
+#pageTwo img {
+    width: 30%;
 }
 
-.pageTwoContainer img,
+/*title of page*/
+#pageThree img {
+    width: 30%;
+}
+
+.pageTwoContainer,
+.pageThreeContainer {
+    display: flex;
+    width: 70%;
+}
+
 .dustForm,
 .smiles {
-    width: calc(100% / 3);
+    width: calc(70% / 3);
 }
 
 .dustForm:hover,
 .smiles:hover {
     transform: scale(1.1);
     cursor: pointer;
-}
-
-.makeArea {
-    display: flex;
-    min-width: 100%;
-}
-
-.addOnsArea {
-    width: 50%;
-    background: lightblue;
-}
-
-.rowOne {
-    background-color: #f7f5f2;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.rowOne img {
-    width: calc(100% / 5);
-    border: solid 2px white;
-}
-
-.rowTwo {
-    background-color: orange;
-    display: flex;
-}
-
-.rowTwo img {
-    width: calc(100% / 5);
-}
-
-.rowThree {
-    background-color: pink;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.rowThree img {
-    width: calc(100% / 5);
-}
-
-.rowFour {
-    background-color: peachpuff;
-    display: flex;
-    flex-wrap: wrap;
-}
-.rowFour img {
-    width: calc(100% / 5);
-}
-
-.livePreviewArea {
-    width: 50%;
-    background: white;
-}
-
-.livePreviewImageContainer {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.livePreviewImageContainer img {
-    max-width: 100%;
 }
 
 footer {
